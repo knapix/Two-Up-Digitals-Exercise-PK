@@ -13,7 +13,10 @@ public abstract class MainPage {
     protected WebDriverWait wait;
     protected String url;
 
-public MainPage(WebDriver driver, WebDriverWait wait) {this.driver = driver; this.wait = wait; }
+    public MainPage(WebDriver driver, WebDriverWait wait) {
+        this.driver = driver;
+        this.wait = wait;
+    }
 
 
     public void hoverOverWebelement(WebElement element) {

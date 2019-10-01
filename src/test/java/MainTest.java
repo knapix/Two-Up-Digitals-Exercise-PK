@@ -15,13 +15,12 @@ public class MainTest {
     PremierLeaguePage premierLeaguePage;
 
 
-
     @BeforeTest
     @Parameters({"url"})
     public void before(String url) {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--start-maximized");
-        System.setProperty("webdriver.chrome.driver", "C:/driverChrome/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "src\\test\\resources\\chromedriver.exe");
         driver = new ChromeDriver();
         wait = new WebDriverWait(driver, 30);
         indexPage = new IndexPage(driver, wait, url);
